@@ -21,7 +21,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final String HANDYMAN_URL = "https://goofy-wozniak-0c744e.netlify.app/";
+    private final String HANDYMAN_URL = https://lnhhm.netlify.app/;
     private final static int PICK_FILE_REQUEST_CODE = 0;
     private ValueCallback<Uri[]> mFilePathCallback;
     private ProgressBar handymanPB;
