@@ -9,5 +9,19 @@
 
     <body>
         <h1>Static Website Template</h1>
+        
+        //javascript//
+        router.get("/customer/list", middleware.isLoggedIn, function (req, res) {
+    Customer.find(function (err, customers) {
+        if (err) {
+            req.flash("error", "Oops!! Something went wrong. Please try again.")
+            res.redirect("back");
+        } else {
+            res.render("customer/c_list", { customers: customers });
+        }
+    });
+});
+        //javascript//
+        
     </body>
 </html>
