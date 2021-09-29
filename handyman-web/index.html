@@ -11,16 +11,40 @@
         <h1>Static Website Template</h1>
         
         //javascript//
-        router.get("/customer/list", middleware.isLoggedIn, function (req, res) {
-    Customer.find(function (err, customers) {
-        if (err) {
-            req.flash("error", "Oops!! Something went wrong. Please try again.")
-            res.redirect("back");
-        } else {
-            res.render("customer/c_list", { customers: customers });
-        }
-    });
-});
+       <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+      ReactDOM.render(
+        <form name="contact" method="post">
+          <p>
+            <label>Your Name: <input type="text" name="name"/></label>
+          </p>
+          <p>
+            <label>Your Email: <input type="email" name="email"/></label>
+          </p>
+          <p>
+            <label>Message: <textarea name="message"></textarea></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>,
+        document.getElementById("root")
+      );
+
+    </script>
+  </body>
+</html>
         //javascript//
         
     </body>
